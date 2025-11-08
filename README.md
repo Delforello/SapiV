@@ -3,7 +3,8 @@
 # SapiV
 **(Saturn Api Velocity)**
 
- SapiV is an Api based on Velocity, open source and easy to use, allowing anyone to quickly create their exploits quickly, securely, in a safe way.
+SapiV is an Api based on Velocity, open source and easy to use, allowing anyone to quickly create their exploits quickly, securely, in a safe way.
+It may have bugs or issues. If you'd like to help fix them, open a ticket on our Discord server: https://discord.gg/PHWymfWpr4
 
 - UNC: 99%
 - Level: 8
