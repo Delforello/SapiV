@@ -11,33 +11,33 @@
 
 # Functions
 
-SapiX.Api.Inject();
+SapiV.Api.Inject();
 
-SapiX.Api.Execute();
+SapiV.Api.Execute();
 
-SapiX.Api.IsRobloxOpen();
+SapiV.Api.IsRobloxOpen();
 
-SapiX.Api.IsInjected();
+SapiV.Api.IsInjected();
 
-SapiX.Api.KillRoblox();
+SapiV.Api.KillRoblox();
 
-SapiX.Api.SetCustomInjectionNotification(string title, string text, string idIcon, string duration)
+SapiV.Api.SetCustomInjectionNotification(string title, string text, string idIcon, string duration)
 
-SapiX.Api.SetCustomUserAgent(string Name);
+SapiV.Api.SetCustomUserAgent(string Name);
 
-SapiX.Api.SetCustomNameExecutor(string Name, string Version);
+SapiV.Api.SetCustomNameExecutor(string Name, string Version);
 
-SapiX.Api.EnableConsole = bool;
+SapiV.Api.EnableConsole = bool;
 
 # Examples
 
-SapiX.Api.SetCustomInjectionNotification("Test executor", "Injected successfully!", "93547137238535", "3");
+SapiV.Api.SetCustomInjectionNotification("Test executor", "Injected successfully!", "93547137238535", "3");
 
-SapiX.Api.SetCustomNameExecutor("Test executor", "v1.0.0");
+SapiV.Api.SetCustomNameExecutor("Test executor", "v1.0.0");
 
-SapiX.Api.SetCustomUserAgent("Test executor");
+SapiV.Api.SetCustomUserAgent("Test executor");
 
-SapiX.Api.EnableConsole = false;
+SapiV.Api.EnableConsole = false;
 
 If you don't use these customization functions, or if you want to leave a parameter empty, default values will be applied. To leave a parameter empty for example, the icon, use an empty string like this: "".
 These functions go in the constructor.
