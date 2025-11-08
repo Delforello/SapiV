@@ -321,19 +321,6 @@ discord.gg/bDMtpCnx3K";
                                    !File.Exists(decompilerPath) ||
                                    !File.Exists(injectorPath) ||
                                    !File.Exists(versionPath);
-
-                if (filesMissing)
-                {
-                    Output($"\n[SapiV] Missing files or directories: " +
-                           $"AutoExec: {Directory.Exists(autoExecPath)}, " +
-                           $"Bin: {Directory.Exists(binPath)}, " +
-                           $"Scripts: {Directory.Exists(scriptsPath)}, " +
-                           $"Workspace: {Directory.Exists(workspacePath)}, " +
-                           $"Decompiler: {File.Exists(decompilerPath)}, " +
-                           $"Injector: {File.Exists(injectorPath)}, " +
-                           $"Version: {File.Exists(versionPath)}");
-                }
-
                 return filesMissing;
             }
             catch (Exception ex)
@@ -503,4 +490,5 @@ discord.gg/bDMtpCnx3K";
             }
         }
     }
+
 }
