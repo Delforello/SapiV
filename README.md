@@ -10,6 +10,9 @@ It may have bugs or issues. If you'd like to help fix them, open a ticket on our
 - Level: 8
 - Only works on roblox web version
 
+## SapiV doesn't work on WinForm .Net framework.
+Use WinForms .Net or WPF
+
 # Functions
 
 SapiV.Api.Inject();
