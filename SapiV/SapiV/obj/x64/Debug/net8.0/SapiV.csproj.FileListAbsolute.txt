@@ -1,0 +1,14 @@
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\bin\x64\Debug\net8.0\SapiV.deps.json
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\bin\x64\Debug\net8.0\SapiV.dll
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\bin\x64\Debug\net8.0\SapiV.pdb
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\bin\x64\Debug\net8.0\VelocityAPI.dll
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.csproj.AssemblyReference.cache
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.AssemblyInfoInputs.cache
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.AssemblyInfo.cs
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.csproj.CoreCompileInputs.cache
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.csproj.Up2Date
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.dll
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\refint\SapiV.dll
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\SapiV.pdb
+C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\x64\Debug\net8.0\ref\SapiV.dll
