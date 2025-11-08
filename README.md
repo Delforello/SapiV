@@ -44,15 +44,10 @@ These functions go in the constructor.
 
 ## For the custom icon you must use an image, not a decal!!
 
-# How to make an executor with SapiX
-
-https://www.youtube.com/watch?v=-QB6N0mTpQ4&t=22s
-(It doesn't show how to use the new customization functions)
-
 # Credits
 
-Xeno
+Velocity
 
-https://discord.gg/xeno-now
+https://discord.gg/mEgfFaTy6A
 
-https://www.xeno.onl
+https://getvelocity.lol/
