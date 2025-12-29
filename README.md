@@ -1,4 +1,5 @@
 ## ⚠️If you publish an executor with SapiV or modify it, don’t forget to give me credits! I really appreciate it.⚠️
+## RUN YOUR EXECUTOR AS ADMINISTRATOR, OTHERWISE THE ATTACH WON'T WORK!
 
 # SapiV
 **(Saturn Api Velocity)**
