@@ -55,4 +55,4 @@ Velocity
 
 https://discord.gg/mEgfFaTy6A
 
-https://getvelocity.lol/
+https://realvelocity.xyz/
