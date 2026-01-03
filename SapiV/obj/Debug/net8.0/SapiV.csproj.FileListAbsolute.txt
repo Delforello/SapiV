@@ -12,3 +12,17 @@ C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.dll
 C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\Debug\net8.0\refint\SapiV.dll
 C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.pdb
 C:\Users\giuli\Desktop\apis\SapiV\SapiV\obj\Debug\net8.0\ref\SapiV.dll
+D:\PC\apis\SapiV\SapiV\bin\Debug\net8.0\SapiV.deps.json
+D:\PC\apis\SapiV\SapiV\bin\Debug\net8.0\SapiV.dll
+D:\PC\apis\SapiV\SapiV\bin\Debug\net8.0\SapiV.pdb
+D:\PC\apis\SapiV\SapiV\bin\Debug\net8.0\VelocityAPI.dll
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.csproj.AssemblyReference.cache
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.GeneratedMSBuildEditorConfig.editorconfig
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.AssemblyInfoInputs.cache
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.AssemblyInfo.cs
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.csproj.CoreCompileInputs.cache
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.csproj.Up2Date
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.dll
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\refint\SapiV.dll
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\SapiV.pdb
+D:\PC\apis\SapiV\SapiV\obj\Debug\net8.0\ref\SapiV.dll

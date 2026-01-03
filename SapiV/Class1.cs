@@ -289,7 +289,7 @@ discord.gg/bDMtpCnx3K";
                 }
 
                 using HttpClient client = new HttpClient();
-                string remoteVersion = (await client.GetStringAsync("https://getvelocity.lol/assets/current_version.txt")).Trim();
+                string remoteVersion = (await client.GetStringAsync("https://realvelocity.xyz/assets/current_version.txt")).Trim();
                 Velocity_Version = remoteVersion;
                 bool isUpdateNeeded = localVersion != remoteVersion;
                 return isUpdateNeeded;
