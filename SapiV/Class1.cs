@@ -20,6 +20,7 @@ namespace SapiV
         private static extern bool AllocConsole();
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool FreeConsole();
+        private static readonly HttpClient _httpClient = new HttpClient();
         private static readonly VelAPI velApi = new VelAPI();
         private static bool _isInjected;
         private static string? LuaScriptNotification;
@@ -74,11 +75,15 @@ discord.gg/bDMtpCnx3K";
                 _isInjected = false;
                 return;
             }
+
             await FileManager();
+
             string autoExecPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AutoExec");
             string filePath = Path.Combine(autoExecPath, "CustomNotification.lua");
             File.WriteAllText(filePath, LuaScriptNotification);
-            Thread.Sleep(500);
+
+            await Task.Delay(500);
+
             var status = await velApi.Attach(proc.Id);
             try
             {
@@ -86,65 +91,48 @@ discord.gg/bDMtpCnx3K";
                 {
                     _isInjected = true;
                     velApi.Execute(LuaScriptNotification);
-                    await Task.Delay(5000).ContinueWith(_ =>
-                    {
-                        try
-                        {
-                            if (status == VelocityStates.Attached)
-                                File.Delete(filePath);
-                        }
-                        catch (Exception ex)
-                        {
-                            AllocConsole();
-                            Output($"==> Cannot delete the file: {ex.Message}");
-                            Thread.Sleep(5000);
-                            FreeConsole();
-                        }
-                    });
+                    await Task.Delay(500);
+
+                    await DeleteFileNotification(filePath);
                 }
                 else
                 {
                     _isInjected = false;
                     velApi.StopCommunication();
-                    await Task.Delay(5000).ContinueWith(_ =>
-                    {
-                        try
-                        {
-                            if (status == VelocityStates.Attached)
-                                File.Delete(filePath);
-                        }
-                        catch (Exception ex)
-                        {
-                            AllocConsole();
-                            Output($"==> Cannot delete the file: {ex.Message}");
-                            Thread.Sleep(5000);
-                            FreeConsole();
-                        }
-                    });
+                    await Task.Delay(500);
+
+                    await DeleteFileNotification(filePath);
                 }
             }
             catch (Exception ex)
             {
                 _isInjected = false;
                 velApi.StopCommunication();
-                await Task.Delay(5000).ContinueWith(_ =>
-                {
-                    try
-                    {
-                        if (status == VelocityStates.Attached)
-                            File.Delete(filePath);
-                    }
-                    catch
-                    {
-                        AllocConsole();
-                        Output($"==> Cannot delete the file: {ex.Message}");
-                        Thread.Sleep(5000);
-                        FreeConsole();
-                    }
-                });
+                await Task.Delay(500);
+
+                await DeleteFileNotification(filePath);
+
                 AllocConsole();
+
                 Output($"==> Injection failed: {ex.Message}");
-                Thread.Sleep(5000);
+                await Task.Delay(500);
+
+                FreeConsole();
+            }
+        }
+
+        private static async Task DeleteFileNotification(string filePath)
+        {
+            try
+            {
+                if (File.Exists(filePath))
+                    File.Delete(filePath);
+            }
+            catch (Exception ex)
+            {
+                AllocConsole();
+                Output($"==> Cannot delete the file: {ex.Message}");
+                await Task.Delay(500);
                 FreeConsole();
             }
         }
@@ -288,8 +276,7 @@ discord.gg/bDMtpCnx3K";
                     return true;
                 }
 
-                using HttpClient client = new HttpClient();
-                string remoteVersion = (await client.GetStringAsync("https://realvelocity.xyz/assets/current_version.txt")).Trim();
+                string remoteVersion = (await _httpClient.GetStringAsync("https://realvelocity.xyz/assets/current_version.txt")).Trim();
                 Velocity_Version = remoteVersion;
                 bool isUpdateNeeded = localVersion != remoteVersion;
                 return isUpdateNeeded;
@@ -449,7 +436,7 @@ discord.gg/bDMtpCnx3K";
                     await Task.Run(() => velApi.StartCommunication());
                     int maxWaitSeconds = 120;
                     int waited = 0;
-                    while ((CheckFiles() || await CheckUpdate()) && waited < maxWaitSeconds)
+                    while (CheckFiles() && waited < maxWaitSeconds)
                     {
                         await Task.Delay(1000);
                         waited++;
