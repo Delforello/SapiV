@@ -8,7 +8,7 @@ using VelocityAPI;
 /* 
 Made by Sonar.
 
-Join the Saturn X discord server! discord.gg/PHWymfWpr4
+Join the Saturn X discord server! discord.gg/RrNWfpjtHA
  */
 
 namespace SapiV
